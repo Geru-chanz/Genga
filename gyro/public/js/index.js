@@ -1,6 +1,9 @@
 (function () {
 
-  var $zo;
+  var ws = new WebSocket('ws://genga-rp7rf.c9users.io');
+
+  // 接続が始まった時
+  ws.onopen = function() { };
 
   $(function () {
     window.addEventListener("deviceorientation", deviceorientationHandler);
@@ -35,6 +38,8 @@
     xmlhttp.open("POST", "https://genga-rp7rf.c9users.io");
     xmlhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
     xmlhttp.send(json_upload);
+    ws.send(JSON.stringify(gyro_obj));
     console.log('sended')
   }
-})();
+
+  ws.onclose = function() { };})();
