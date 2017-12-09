@@ -1,0 +1,52 @@
+ <!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- Compiled and minified CSS -->
+ <link rel="stylesheet" href="css/materialize.min.css">
+
+  <!-- font読み込み -->
+    <link href="https://fonts.googleapis.com/earlyaccess/notosansjapanese.css" rel="stylesheet" />
+
+  <title>Modal</title>
+</head>
+<body>
+
+    <!-- jQuery 読み込み-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+
+  <!-- Modal Trigger -->
+  <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</a>
+
+  <!-- Modal Structure -->
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+    <p>右隣の人と、<br>30秒間見つめ合う</p>
+    </div>
+<!--
+    <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+    </div>
+-->
+ <div class="footer-button">
+     <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">DONE</a>
+ </div>
+  </div>
+
+
+
+    <script>
+        $(document).ready(function(){
+            // the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
+            $('.modal').modal({
+            endingTop: '35%'
+            });
+        });
+    </script>
+
+</body>
+</html>
